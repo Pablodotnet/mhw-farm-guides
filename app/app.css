@@ -1,0 +1,43 @@
+/* app css stylesheet */
+
+.nav-bar {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+.nav-bar {
+	display: block;
+	width: 100%;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+.branding {
+	float: left;
+	margin: 20px;
+}
+
+.branding a {
+	width: 80%;
+	font-size: 1.6em;
+	text-align: left;
+	text-decoration: none;
+	color: white;
+}
+
+.p-20 {
+	padding: 20px;
+}

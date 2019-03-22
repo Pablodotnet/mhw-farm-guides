@@ -1,0 +1,33 @@
+<div class="p-20" layout="row" layout-align="start start">
+	<md-card class="p-20" flex="30" id="weapons-list">
+		<div ng-if="!weapons" layout="row" layout-align="center center">
+			<md-progress-circular md-diameter="60"></md-progress-circular>
+		</div>
+		<div ng-if="weapons">
+			<md-list>
+				<md-list-item class="md-2-line" ng-repeat="weapon in weapons" ng-click="showItemInfo(weapon)">
+					<img ng-src="{{ weapon.assets.icon }}" class="md-avatar" alt="{{ weapon.name }}-icon" />
+					<div class="md-list-item-text">
+						<h3>{{ weapon.name }}</h3>
+						<p>{{ weapon.type }}</p>
+					</div>
+				</md-list-item>
+			</md-list>
+		</div>
+	</md-card>
+	<md-card class="p-20" flex>
+		<p ng-if="!weaponSelected">Here goes the information of the weapon</p>
+		<div ng-if="weaponSelected" layout="row" layout-align="start start">
+			<div layout="column" flex="30">
+				<md-list>
+					<md-list-item ng-repeat="(key, value) in weaponSelected">
+						<span><strong>{{ key }}</strong> {{ value }}</span>
+					</md-list-item>
+				</md-list>
+			</div>
+			<div layout-align="center center" flex>
+				<img ng-src="{{ weaponSelected.assets.image }}" alt="{{ weaponSelected.name }}-image">
+			</div>
+		</div>
+	</md-card>
+</div>
